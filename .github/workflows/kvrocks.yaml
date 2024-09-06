@@ -427,6 +427,8 @@ jobs:
             compiler: gcc
           - name: Rocky Linux 9
             image: rockylinux:9
+            with_sanitizer: -DENABLE_ASAN=ON
+            without_jemalloc: -DDISABLE_JEMALLOC=ON
             compiler: gcc
           - name: Debian 12
             image: debian:12
